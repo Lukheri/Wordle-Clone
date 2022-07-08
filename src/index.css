@@ -38,6 +38,26 @@ h1 {
   color: #F6F8FA;
 }
 
+.reset {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  padding: 100px;
+  transform: translate(-50%, 50%);
+  background-color: #1D1C1A;
+  z-index: 1000;
+}
+
+.reset-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1000;
+}
+
 .line{
   display: flex;
   gap: 5px;
