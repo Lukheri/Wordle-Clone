@@ -26,9 +26,9 @@ function App() {
 
   useEffect(() => {
     const handleType = (event) => {
-      if(!gameOver){
+      if(!gameOver && (guessTurn < 6)){
         if((event.key === 'Enter') && (currentGuess.length === 5)){
-          if(!words.includes(currentGuess)){
+          if(!words.includes(currentGuess.toLowerCase())){
             console.log('Invalid word')
             return
           } 
@@ -37,7 +37,7 @@ function App() {
           } 
 
           const newGuesses = [...guesses]
-          newGuesses[guessTurn] = currentGuess
+          newGuesses[guessTurn] = currentGuess.toLowerCase()
           setGuesses(newGuesses)
           setCurrentGuess('')
           setGuessTurn(prev => prev + 1)
@@ -77,6 +77,7 @@ function App() {
         setGuessTurn={setGuessTurn}
         setGuesses={setGuesses}
         setAnswer={setAnswer}
+        guessTurn={guessTurn}
       />
     </div>
   )
