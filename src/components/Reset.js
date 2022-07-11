@@ -16,7 +16,7 @@ export default function Reset({ open, setGameOver, words, setGuessTurn, setGuess
         <>
             <div className='reset-overlay'></div>
             <div className='reset'>
-                {(guessTurn === 6) ? 'YOU RAN OUT OF GUESS D:' : 'CONGRATS! YOU GUESSED THE WORD'}
+                {((guessTurn === 6 && !open)) ? 'YOU RAN OUT OF GUESS D:' : 'CONGRATS! YOU GUESSED THE WORD'}
                 <button onClick={handleClick}>RESET</button>
             </div>        
         </>
