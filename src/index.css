@@ -23,6 +23,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .box{ 
@@ -73,4 +75,18 @@ h1 {
 
 .incorrect {
   background-color: #AEAEAE;
+}
+
+.keyboard {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.keyboard > div {
+  margin: 5px;
+  width: 40px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 50px;
 }
